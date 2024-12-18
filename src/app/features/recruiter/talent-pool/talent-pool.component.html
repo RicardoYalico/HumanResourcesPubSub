@@ -1,0 +1,104 @@
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Talent Pool</h1>
+  
+    <!-- Filtros de Candidatos -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <input type="text" class="form-control" id="searchCandidate" placeholder="Search Candidates...">
+      </div>
+      <div class="col-md-6 text-end">
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addCandidateModal">
+          <i class="bi bi-plus-circle"></i> Add New Candidate
+        </button>
+      </div>
+    </div>
+  
+    <!-- Lista de Candidatos en la Base de Talento -->
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Position Applied</th>
+            <th scope="col">Skills</th>
+            <th scope="col">Status</th>
+            <th scope="col">Added On</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>Software Engineer</td>
+            <td>JavaScript, Angular, Node.js</td>
+            <td><span class="badge bg-warning">Not Selected</span></td>
+            <td>2024-12-15</td>
+            <td>
+              <button class="btn btn-info btn-sm me-2">View</button>
+              <button class="btn btn-danger btn-sm">Remove</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>Product Manager</td>
+            <td>Product Design, Agile, UX/UI</td>
+            <td><span class="badge bg-warning">Not Selected</span></td>
+            <td>2024-11-30</td>
+            <td>
+              <button class="btn btn-info btn-sm me-2">View</button>
+              <button class="btn btn-danger btn-sm">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Paginación -->
+    <nav aria-label="Talent Pool pagination" class="mt-4">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- Modal para agregar nuevo candidato -->
+  <div class="modal fade" id="addCandidateModal" tabindex="-1" aria-labelledby="addCandidateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addCandidateModalLabel">Add New Candidate</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addCandidateForm">
+            <div class="mb-3">
+              <label for="candidateName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="candidateName" placeholder="Enter full name" required>
+            </div>
+            <div class="mb-3">
+              <label for="candidatePosition" class="form-label">Position Applied</label>
+              <input type="text" class="form-control" id="candidatePosition" placeholder="Enter the position" required>
+            </div>
+            <div class="mb-3">
+              <label for="candidateSkills" class="form-label">Skills</label>
+              <input type="text" class="form-control" id="candidateSkills" placeholder="Enter skills" required>
+            </div>
+            <div class="mb-3">
+              <label for="candidateNotes" class="form-label">Notes</label>
+              <textarea class="form-control" id="candidateNotes" rows="3" placeholder="Additional notes about the candidate" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Candidate</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

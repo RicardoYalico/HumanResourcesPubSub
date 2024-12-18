@@ -1,0 +1,78 @@
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Messaging Center</h1>
+  
+    <!-- Lista de conversaciones -->
+    <div class="row">
+      <!-- Panel de conversaciones -->
+      <div class="col-md-4">
+        <div class="list-group">
+          <h5 class="text-center mb-3">Conversations</h5>
+          <button type="button" class="list-group-item list-group-item-action active">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <strong>John Doe</strong>
+                <p class="mb-0 text-muted">Software Engineer</p>
+              </div>
+              <span class="badge bg-primary rounded-pill">2</span>
+            </div>
+          </button>
+          <button type="button" class="list-group-item list-group-item-action">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <strong>Jane Smith</strong>
+                <p class="mb-0 text-muted">Data Analyst</p>
+              </div>
+              <span class="text-muted small">Yesterday</span>
+            </div>
+          </button>
+          <button type="button" class="list-group-item list-group-item-action">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <strong>Michael Johnson</strong>
+                <p class="mb-0 text-muted">Project Manager</p>
+              </div>
+              <span class="text-muted small">2 days ago</span>
+            </div>
+          </button>
+        </div>
+      </div>
+  
+      <!-- Panel de mensajes -->
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title mb-0">Chat with John Doe</h5>
+          </div>
+          <div class="card-body chat-container">
+            <!-- Mensajes -->
+            <div class="mb-3">
+              <div class="d-flex">
+                <div class="me-3">
+                  <span class="badge bg-primary">You</span>
+                </div>
+                <div>
+                  <p class="mb-1">Hello John, thank you for applying!</p>
+                  <small class="text-muted">10:30 AM</small>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 text-end">
+              <div>
+                <p class="mb-1 bg-light d-inline-block p-2 rounded">Thank you! Looking forward to it.</p>
+                <small class="text-muted d-block">10:32 AM</small>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <form class="d-flex">
+              <input type="text" class="form-control me-2" placeholder="Type a message..." />
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-send"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

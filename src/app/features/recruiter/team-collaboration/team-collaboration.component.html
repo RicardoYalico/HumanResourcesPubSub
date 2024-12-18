@@ -1,0 +1,121 @@
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Team Collaboration</h1>
+  
+    <!-- Filtros y Búsqueda de Tareas -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <input type="text" class="form-control" id="searchTask" placeholder="Search Tasks...">
+      </div>
+      <div class="col-md-6 text-end">
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#assignTaskModal">
+          <i class="bi bi-plus-circle"></i> Assign New Task
+        </button>
+      </div>
+    </div>
+  
+    <!-- Lista de Tareas Asignadas -->
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Assigned To</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Status</th>
+            <th scope="col">Assigned By</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Screen Candidate Applications</td>
+            <td>John Doe</td>
+            <td>2024-12-20</td>
+            <td><span class="badge bg-warning">In Progress</span></td>
+            <td>Jane Smith</td>
+            <td>
+              <button class="btn btn-info btn-sm me-2">View</button>
+              <button class="btn btn-success btn-sm">Complete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Schedule Interviews</td>
+            <td>Alice Johnson</td>
+            <td>2024-12-18</td>
+            <td><span class="badge bg-success">Completed</span></td>
+            <td>Michael Lee</td>
+            <td>
+              <button class="btn btn-info btn-sm me-2">View</button>
+              <button class="btn btn-danger btn-sm">Remove</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Prepare Interview Feedback</td>
+            <td>David Brown</td>
+            <td>2024-12-22</td>
+            <td><span class="badge bg-secondary">Pending</span></td>
+            <td>Emily White</td>
+            <td>
+              <button class="btn btn-info btn-sm me-2">View</button>
+              <button class="btn btn-success btn-sm">Complete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Paginación -->
+    <nav aria-label="Team Collaboration pagination" class="mt-4">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- Modal para Asignar Nueva Tarea -->
+  <div class="modal fade" id="assignTaskModal" tabindex="-1" aria-labelledby="assignTaskModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="assignTaskModalLabel">Assign New Task</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="assignTaskForm">
+            <div class="mb-3">
+              <label for="taskName" class="form-label">Task Name</label>
+              <input type="text" class="form-control" id="taskName" placeholder="Enter task name" required>
+            </div>
+            <div class="mb-3">
+              <label for="assignTo" class="form-label">Assign To</label>
+              <select class="form-select" id="assignTo" required>
+                <option selected>Choose team member</option>
+                <option value="1">John Doe</option>
+                <option value="2">Alice Johnson</option>
+                <option value="3">David Brown</option>
+                <option value="4">Emily White</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="dueDate" class="form-label">Due Date</label>
+              <input type="date" class="form-control" id="dueDate" required>
+            </div>
+            <div class="mb-3">
+              <label for="taskNotes" class="form-label">Notes</label>
+              <textarea class="form-control" id="taskNotes" rows="3" placeholder="Additional task notes" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Assign Task</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

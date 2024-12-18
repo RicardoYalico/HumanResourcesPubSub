@@ -1,0 +1,99 @@
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Process Stage Management</h1>
+  
+    <!-- Filtros -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <input type="text" class="form-control" id="searchStage" placeholder="Search Stage...">
+      </div>
+      <div class="col-md-6 text-end">
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addStageModal">
+          <i class="bi bi-plus-circle"></i> Add New Stage
+        </button>
+      </div>
+    </div>
+  
+    <!-- Lista de etapas -->
+    <div class="list-group">
+      <!-- Etapa 1: Entrevista inicial -->
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <strong>Initial Interview</strong>
+          <p class="mb-1 text-muted">First round of interviews with candidates.</p>
+        </div>
+        <div>
+          <button class="btn btn-warning btn-sm me-2">Edit</button>
+          <button class="btn btn-danger btn-sm">Delete</button>
+        </div>
+      </div>
+  
+      <!-- Etapa 2: Prueba técnica -->
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <strong>Technical Test</strong>
+          <p class="mb-1 text-muted">Assess technical skills of candidates.</p>
+        </div>
+        <div>
+          <button class="btn btn-warning btn-sm me-2">Edit</button>
+          <button class="btn btn-danger btn-sm">Delete</button>
+        </div>
+      </div>
+  
+      <!-- Etapa 3: Entrevista Final -->
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <strong>Final Interview</strong>
+          <p class="mb-1 text-muted">Final round of interviews with selected candidates.</p>
+        </div>
+        <div>
+          <button class="btn btn-warning btn-sm me-2">Edit</button>
+          <button class="btn btn-danger btn-sm">Delete</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Paginación -->
+    <nav aria-label="Process Stages pagination" class="mt-4">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- Modal para agregar nueva etapa -->
+  <div class="modal fade" id="addStageModal" tabindex="-1" aria-labelledby="addStageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addStageModalLabel">Add New Stage</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="addStageForm">
+            <div class="mb-3">
+              <label for="stageName" class="form-label">Stage Name</label>
+              <input type="text" class="form-control" id="stageName" placeholder="Enter stage name" required>
+            </div>
+            <div class="mb-3">
+              <label for="stageDescription" class="form-label">Description</label>
+              <textarea class="form-control" id="stageDescription" rows="3" placeholder="Enter stage description" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="stageDuration" class="form-label">Duration</label>
+              <input type="number" class="form-control" id="stageDuration" placeholder="Enter stage duration in days" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Stage</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

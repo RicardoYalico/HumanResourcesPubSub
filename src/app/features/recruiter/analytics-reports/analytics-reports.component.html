@@ -1,0 +1,164 @@
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Analytics and Reports</h1>
+  
+    <!-- Filtros de Reporte -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <label for="reportType" class="form-label">Select Report Type</label>
+        <select class="form-select" id="reportType" aria-label="Select Report Type">
+          <option selected>Choose a report</option>
+          <option value="1">Candidate Statistics</option>
+          <option value="2">Interview Efficiency</option>
+          <option value="3">Application Source</option>
+          <option value="4">Hiring Process Efficiency</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="reportDateRange" class="form-label">Date Range</label>
+        <input type="date" class="form-control" id="reportDateRange">
+      </div>
+    </div>
+  
+    <!-- Report Content -->
+    <div id="reportContent">
+      <!-- Candidate Statistics Report (example) -->
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <h3>Candidate Statistics</h3>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Number of Applications per Job</h5>
+              <canvas id="candidateStatsChart" width="400" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Interview Efficiency Report (example) -->
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <h3>Interview Efficiency</h3>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Average Interview Duration</h5>
+              <canvas id="interviewEfficiencyChart" width="400" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Hiring Process Efficiency Report (example) -->
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <h3>Hiring Process Efficiency</h3>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Time Taken per Stage</h5>
+              <canvas id="processEfficiencyChart" width="400" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Table of Application Sources -->
+      <div class="row mb-4">
+        <div class="col-md-12">
+          <h3>Application Source</h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Source</th>
+                <th scope="col">Number of Applications</th>
+                <th scope="col">Conversion Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>LinkedIn</td>
+                <td>120</td>
+                <td>35%</td>
+              </tr>
+              <tr>
+                <td>Company Website</td>
+                <td>95</td>
+                <td>40%</td>
+              </tr>
+              <tr>
+                <td>Indeed</td>
+                <td>65</td>
+                <td>30%</td>
+              </tr>
+              <tr>
+                <td>Referrals</td>
+                <td>50</td>
+                <td>45%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Download Report Button -->
+    <div class="text-center mt-4">
+      <button class="btn btn-primary">
+        <i class="bi bi-download"></i> Download Report
+      </button>
+    </div>
+  </div>
+  
+  <!-- JavaScript for Charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Sample Candidate Statistics Chart
+    var ctx1 = document.getElementById('candidateStatsChart').getContext('2d');
+    var candidateStatsChart = new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: ['Software Engineer', 'Data Analyst', 'Product Manager', 'UX Designer'],
+        datasets: [{
+          label: 'Number of Applications',
+          data: [120, 95, 80, 65],
+          backgroundColor: 'rgba(54, 162, 235, 0.5)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  
+    // Sample Interview Efficiency Chart
+    var ctx2 = document.getElementById('interviewEfficiencyChart').getContext('2d');
+    var interviewEfficiencyChart = new Chart(ctx2, {
+      type: 'line',
+      data: {
+        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+        datasets: [{
+          label: 'Average Interview Duration (minutes)',
+          data: [45, 50, 40, 55],
+          borderColor: 'rgba(75, 192, 192, 1)',
+          fill: false
+        }]
+      }
+    });
+  
+    // Sample Hiring Process Efficiency Chart
+    var ctx3 = document.getElementById('processEfficiencyChart').getContext('2d');
+    var processEfficiencyChart = new Chart(ctx3, {
+      type: 'pie',
+      data: {
+        labels: ['Stage 1', 'Stage 2', 'Stage 3', 'Stage 4'],
+        datasets: [{
+          data: [30, 25, 20, 25],
+          backgroundColor: ['#FF5733', '#33FF57', '#3357FF', '#FF33A1']
+        }]
+      }
+    });
+  </script>
+  

@@ -1,0 +1,90 @@
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Notifications</h1>
+  
+    <!-- Filtros -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <select class="form-select" aria-label="Filter by Type">
+          <option selected>Filter by Type</option>
+          <option value="1">Interview Reminder</option>
+          <option value="2">Application Review</option>
+          <option value="3">Job Posting Update</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <select class="form-select" aria-label="Filter by Date">
+          <option selected>Filter by Date</option>
+          <option value="1">Last 24 hours</option>
+          <option value="2">Last 7 days</option>
+          <option value="3">All time</option>
+        </select>
+      </div>
+    </div>
+  
+    <!-- Lista de notificaciones -->
+    <div class="list-group">
+      <!-- Recordatorio de entrevista -->
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex justify-content-between">
+          <div>
+            <strong>Interview Reminder: Software Engineer</strong>
+            <p class="mb-1 text-muted">Interview with John Doe is scheduled for tomorrow.</p>
+          </div>
+          <span class="badge bg-warning rounded-pill">Pending</span>
+        </div>
+        <small class="text-muted">1 hour ago</small>
+      </a>
+  
+      <!-- Recordatorio para revisión de aplicaciones -->
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex justify-content-between">
+          <div>
+            <strong>Review Application: Data Analyst</strong>
+            <p class="mb-1 text-muted">Please review the new application from Jane Smith.</p>
+          </div>
+          <span class="badge bg-info rounded-pill">New</span>
+        </div>
+        <small class="text-muted">3 hours ago</small>
+      </a>
+  
+      <!-- Actualización de publicación de trabajo -->
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex justify-content-between">
+          <div>
+            <strong>Job Posting Update</strong>
+            <p class="mb-1 text-muted">The job posting for Project Manager has been updated.</p>
+          </div>
+          <span class="badge bg-success rounded-pill">Reviewed</span>
+        </div>
+        <small class="text-muted">Yesterday</small>
+      </a>
+  
+      <!-- Recordatorio urgente -->
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex justify-content-between">
+          <div>
+            <strong>Urgent: Review New Application</strong>
+            <p class="mb-1 text-muted">The application deadline for the Senior Developer role is approaching.</p>
+          </div>
+          <span class="badge bg-danger rounded-pill">Urgent</span>
+        </div>
+        <small class="text-muted">2 days ago</small>
+      </a>
+    </div>
+  
+    <!-- Paginación -->
+    <nav aria-label="Notifications pagination" class="mt-4">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
