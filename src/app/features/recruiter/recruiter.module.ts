@@ -12,16 +12,17 @@ import { TeamCollaborationComponent } from './team-collaboration/team-collaborat
 import { NotificationsComponent } from './notifications/notifications.component';
 
 const routes: Routes = [
-  { path: 'job-management', component: JobManagmentComponent },
-  { path: 'candidate-list', component: CandidateListComponent },
-  { path: 'stage-evaluations', component: StageEvaluationsComponent },
-  { path: 'messaging-center', component: MessagingCenterComponent },
-  { path: 'notifications', component: NotificationsComponent },
-  { path: 'process-stage-management', component: ProcessStageManagementComponent },
-  { path: 'analytics-reports', component: AnalyticsReportsComponent },
-  { path: 'talent-pool', component: TalentPoolComponent },
-  { path: 'team-collaboration', component: TeamCollaborationComponent },
-  { path: 'candidate-history', component: CandidateListComponent },
+  { path: '', redirectTo: 'job-management', pathMatch: 'full'},
+  { path: 'job-management', component: JobManagmentComponent, pathMatch: 'full' },
+  { path: 'candidate-list', component: CandidateListComponent, pathMatch: 'full' },
+  { path: 'stage-evaluations', component: StageEvaluationsComponent, pathMatch: 'full' },
+  { path: 'messaging-center', component: MessagingCenterComponent, pathMatch: 'full' },
+  { path: 'notifications', component: NotificationsComponent, pathMatch: 'full' },
+  { path: 'process-stage-management', component: ProcessStageManagementComponent, pathMatch: 'full' },
+  { path: 'analytics-reports', component: AnalyticsReportsComponent, pathMatch: 'full' },
+  { path: 'talent-pool', component: TalentPoolComponent, pathMatch: 'full' },
+  { path: 'team-collaboration', component: TeamCollaborationComponent, pathMatch: 'full' },
+  { path: 'candidate-history', component: CandidateListComponent, pathMatch: 'full' },
 ];
 
 @NgModule({

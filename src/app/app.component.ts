@@ -3,10 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import {DatePipe, NgClass, NgFor, NgForOf, NgIf} from "@angular/common";
 import { SideBarComponent } from "./shared/components/side-bar/side-bar.component";
 
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgClass, SideBarComponent, NgIf],
+  imports: [RouterOutlet, NgIf, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
