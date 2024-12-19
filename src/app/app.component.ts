@@ -3,8 +3,6 @@ import { RouterOutlet } from '@angular/router';
 import {DatePipe, NgClass, NgFor, NgForOf, NgIf} from "@angular/common";
 import { SideBarComponent } from "./shared/components/side-bar/side-bar.component";
 
-
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -38,8 +36,6 @@ export class AppComponent implements OnInit{
     //   document.getElementById('applicantContent')!.style.display = 'none';
     //   document.getElementById('recruiterContent')!.style.display = 'block';
     // }
-
-
   }
 
 
