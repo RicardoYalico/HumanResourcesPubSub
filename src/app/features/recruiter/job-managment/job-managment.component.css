@@ -1,0 +1,19 @@
+.custom-dropdown-btn {
+  background-color: rgba(0,0,0,0.2); /* Negro transparente */
+  color: white;
+  border: none;
+  border-radius: 0; /* Bordes rectos */
+}
+
+.custom-dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.8); /* Negro más opaco */
+  border-radius: 0;
+}
+
+.custom-dropdown-menu .dropdown-item {
+  color: white;
+}
+
+.custom-dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover suave */
+}

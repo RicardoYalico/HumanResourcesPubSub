@@ -1,38 +1,75 @@
+<!-- Sidebar -->
+<div class="sidebar d-flex flex-column align-items-center">
+  <!-- Foto de perfil -->
+  <img src="https://i.ibb.co/XZnznp5N/Yo.jpg" alt="Foto de Perfil" class="profile-img">
+  <!-- Nombre y Cargo -->
+  <h5 class="text-center">Ricardo Yalico</h5>
+  <p class="text-center small">Asistente de RR.HH</p>
+  <!-- Línea divisora -->
+  <div class="divider w-100"></div>
+  <!-- Menú de navegación -->
+  <nav class="nav flex-column w-100">
+      <div *ngIf='role == "recruiter"'>
+        <h4 class="text-center text-white">Recruiter Module</h4>
+        <a href="home/recruiter/job-management">💼 Job Management</a>
+        <div class="mb-3">
 
+          <!-- Etiqueta "Próximamente" que agrupa los botones -->
+          <div class="m-2 text-center">
+            <span class="badge bg-warning text-dark px-3 py-2">🚧 Próximamente</span>
+          </div>
 
+          <!-- Grupo de botones deshabilitados -->
+          <div class="d-grid gap-2">
+            <a href="#" class="btn btn-outline-secondary disabled" tabindex="-1" aria-disabled="true">👥 Candidate List</a>
+            <a href="#" class="btn btn-outline-secondary disabled" tabindex="-1" aria-disabled="true">📋 Stage Evaluations</a>
+            <a href="#" class="btn btn-outline-secondary disabled" tabindex="-1" aria-disabled="true">💬 Messaging Center</a>
+            <a href="#" class="btn btn-outline-secondary disabled" tabindex="-1" aria-disabled="true">🔔 Notifications</a>
+            <a href="#" class="btn btn-outline-secondary disabled" tabindex="-1" aria-disabled="true">⚙️ Process Stage Management</a>
+            <a href="#" class="btn btn-outline-secondary disabled" tabindex="-1" aria-disabled="true">📊 Analytics and Reports</a>
+            <a href="#" class="btn btn-outline-secondary disabled" tabindex="-1" aria-disabled="true">🎯 Talent Pool</a>
+            <a href="#" class="btn btn-outline-secondary disabled" tabindex="-1" aria-disabled="true">🤝 Team Collaboration</a>
+            <a href="#" class="btn btn-outline-secondary disabled" tabindex="-1" aria-disabled="true">⏳ Candidate History</a>
+          </div>
+        </div>
 
-<div id="sidebar" class="sidebar bg-dark">
-  <button class="toggle-btn" (click)="toggleBtn()" id="toggle-btn">☰</button>
-
-  <!-- Módulo Applicant -->
-  <div *ngIf='role == "applicant"'>
-    <h4 class="text-center text-white">Applicant Module</h4>
-    <a href="home/applicant/application-tracker">Application Tracker Dashboard</a>
-    <a href="home/applicant/application-history">Application History</a>
-    <a href="home/applicant/process-details">Process Details</a>
-    <a href="home/applicant/messaging-center">Messaging Center</a>
-    <a href="home/applicant/notifications">Notifications</a>
-    <a href="home/applicant/schedule">Schedule</a>
-    <a href="home/applicant/user-profile">User Profile</a>
-    <a href="home/applicant/stage-feedback">Stage Feedback</a>
-    <a href="home/applicant/document-manager">Document Manager</a>
-  </div>
-
-  <!-- Módulo Recruiter -->
-  <div *ngIf='role == "recruiter"'>
-    <h4 class="text-center text-white">Recruiter Module</h4>
-    <a href="home/recruiter/job-management">Job Management</a>
-    <a href="home/recruiter/candidate-list">Candidate List</a>
-    <a href="home/recruiter/stage-evaluations">Stage Evaluations</a>
-    <a href="home/recruiter/messaging-center">Messaging Center</a>
-    <a href="home/recruiter/notifications">Notifications</a>
-    <a href="home/recruiter/process-stage-management">Process Stage Management</a>
-    <a href="home/recruiter/analytics-reports">Analytics and Reports</a>
-    <a href="home/recruiter/talent-pool">Talent Pool</a>
-    <a href="home/recruiter/team-collaboration">Team Collaboration</a>
-    <a href="home/recruiter/candidate-history">Candidate History</a>
-  </div>
+      </div>
+  </nav>
 </div>
+<!--<div id="sidebar" class="sidebar bg-dark">-->
+<!--  <button class="toggle-btn" (click)="toggleBtn()" id="toggle-btn">☰</button>-->
+
+<!--  &lt;!&ndash; Módulo Applicant &ndash;&gt;-->
+<!--  <div *ngIf='role == "applicant"'>-->
+<!--    <h4 class="text-center text-white">Applicant Module</h4>-->
+<!--    <a href="home/applicant/application-tracker">Application Tracker Dashboard</a>-->
+<!--    <a href="home/applicant/application-history">Application History</a>-->
+<!--    <a href="home/applicant/process-details">Process Details</a>-->
+<!--    <a href="home/applicant/messaging-center">Messaging Center</a>-->
+<!--    <a href="home/applicant/notifications">Notifications</a>-->
+<!--    <a href="home/applicant/schedule">Schedule</a>-->
+<!--    <a href="home/applicant/user-profile">User Profile</a>-->
+<!--    <a href="home/applicant/stage-feedback">Stage Feedback</a>-->
+<!--    <a href="home/applicant/document-manager">Document Manager</a>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Módulo Recruiter &ndash;&gt;-->
+<!--  <div *ngIf='role == "recruiter"'>-->
+<!--    <h4 class="text-center text-white">Recruiter Module</h4>-->
+<!--    <a href="home/recruiter/job-management">Job Management</a>-->
+<!--    <a href="home/recruiter/candidate-list">Candidate List</a>-->
+<!--    <a href="home/recruiter/stage-evaluations">Stage Evaluations</a>-->
+<!--    <a href="home/recruiter/messaging-center">Messaging Center</a>-->
+<!--    <a href="home/recruiter/notifications">Notifications</a>-->
+<!--    <a href="home/recruiter/process-stage-management">Process Stage Management</a>-->
+<!--    <a href="home/recruiter/analytics-reports">Analytics and Reports</a>-->
+<!--    <a href="home/recruiter/talent-pool">Talent Pool</a>-->
+<!--    <a href="home/recruiter/team-collaboration">Team Collaboration</a>-->
+<!--    <a href="home/recruiter/candidate-history">Candidate History</a>-->
+<!--  </div>-->
+<!--</div>-->
+
+
 
 <!-- Main Content -->
 <div id="main-content" class="content">
@@ -40,5 +77,5 @@
     <router-outlet />
   </div>
 </div>
-  
-  
+
+

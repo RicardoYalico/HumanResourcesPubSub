@@ -1,0 +1,68 @@
+.custom-dropdown-btn {
+  background-color: #202832; /* Negro transparente */
+  color: white;
+  border: none;
+  border-radius: 0; /* Bordes rectos */
+}
+
+.custom-dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.8); /* Negro más opaco */
+  border-radius: 0;
+}
+
+.custom-dropdown-menu .dropdown-item {
+  color: white;
+}
+
+.custom-dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover suave */
+}
+
+.custom-select {
+  background-color: #202832; /* Negro transparente */
+  color: white;
+  border: none;
+  border-bottom: 2px solid gray; /* Solo borde inferior */
+  border-radius: 0; /* Bordes rectos */
+  padding: 8px;
+  appearance: none; /* Oculta el estilo nativo del select */
+}
+.transparent-card-body {
+  background-color: transparent !important;
+  border: none;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-bottom: 2px solid white; /* Cambio de borde al enfocar */
+  background-color: rgba(0, 0, 0, 0.8); /* Negro más opaco al hacer focus */
+}
+
+.custom-select option {
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  color: white;
+}
+
+.custom-select option:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover suave */
+}
+
+
+
+.transparent-input {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-bottom: 2px solid #313131;
+  color: white;
+  outline: none !important;  /* Quita el borde azul de Bootstrap */
+  padding: 8px;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none !important; /* Quita cualquier sombra que agregue Bootstrap */
+}
+
+/* Personaliza el borde cuando está en foco */
+.transparent-input:focus {
+  border-bottom: 2px solid #313131; /* Cambia el color del borde al hacer focus */
+}
+

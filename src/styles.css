@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url('assets/images/upscalemedia-transformed.jpeg'); /* URL de la imagen */
+  background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+  background-position: center;
+  background-attachment: fixed; /* Mantiene la imagen fija */
+  margin: 0;
+  padding: 0;
+}

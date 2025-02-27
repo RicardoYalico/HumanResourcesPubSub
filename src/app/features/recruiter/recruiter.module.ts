@@ -10,6 +10,7 @@ import { AnalyticsReportsComponent } from './analytics-reports/analytics-reports
 import { TalentPoolComponent } from './talent-pool/talent-pool.component';
 import { TeamCollaborationComponent } from './team-collaboration/team-collaboration.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import {JobDetailsComponent} from './job-details/job-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'job-management', pathMatch: 'full'},
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'talent-pool', component: TalentPoolComponent, pathMatch: 'full' },
   { path: 'team-collaboration', component: TeamCollaborationComponent, pathMatch: 'full' },
   { path: 'candidate-history', component: CandidateListComponent, pathMatch: 'full' },
+  { path: 'job-details', component: JobDetailsComponent, pathMatch: 'full' },
 ];
 
 @NgModule({

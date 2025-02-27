@@ -1,0 +1,192 @@
+<div class="accordion" id="accordionExample">
+  <div >
+    <div  id="headingOne">
+      <h2 class="mb-2">
+        <button class="btn btn-dark text-white w-100 text-start" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <H4>
+            Información General
+          </H4>
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="transparent-card-body">
+        <div class="container my-3">
+          <div class="row g-3">
+
+            <!-- Título del Puesto (Input) -->
+            <div class="col-md-3 col-sm-6">
+              <label class="bg-dark text-white px-2">📌 Título del Puesto</label>
+              <input type="text" class="form-control transparent-input" placeholder="Desarrollador Backend">
+            </div>
+
+            <!-- Ubicación (Select) -->
+            <div class="col-md-3 col-sm-6">
+              <label class="bg-dark text-white px-2">📍 Ubicación</label>
+              <select class="form-select transparent-input custom-select">
+                <option selected disabled>Seleccione...</option>
+                <option>Remoto</option>
+                <option>Híbrido</option>
+                <option>Presencial - Lima</option>
+                <option>Presencial - Otra Ciudad</option>
+              </select>
+            </div>
+
+            <!-- Tipo de Contrato (Select) -->
+            <div class="col-md-3 col-sm-6">
+              <label class="bg-dark text-white px-2">📑 Tipo de Contrato</label>
+              <select class="form-select transparent-input custom-select">
+                <option selected disabled>Seleccione...</option>
+                <option>Tiempo Completo</option>
+                <option>Medio Tiempo</option>
+                <option>Freelance</option>
+                <option>Prácticas</option>
+              </select>
+            </div>
+
+            <!-- Nivel de Experiencia (Select) -->
+            <div class="col-md-3 col-sm-6">
+              <label class="bg-dark text-white px-2">📊 Nivel de Experiencia</label>
+              <select class="form-select transparent-input custom-select">
+                <option selected disabled>Seleccione...</option>
+                <option>Junior</option>
+                <option>Mid</option>
+                <option>Senior</option>
+                <option>Lead</option>
+              </select>
+            </div>
+
+            <!-- Estado de la Vacante (Select) -->
+            <div class="col-md-3 col-sm-6">
+              <label class="bg-dark text-white px-2">🔄 Estado de la Vacante</label>
+              <select class="form-select transparent-input custom-select">
+                <option selected disabled>Seleccione...</option>
+                <option class="dropdown-item">Abierta</option>
+                <option>En Proceso</option>
+                <option>Cerrada</option>
+              </select>
+            </div>
+
+
+            <!-- Fecha de Publicación (Input) -->
+            <div class="col-md-3 col-sm-6">
+              <label class="bg-dark text-white px-2">📅 Fecha de Publicación</label>
+              <input type="date" class="form-control transparent-input">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-2">
+        <button class="btn btn-dark text-white w-100 text-start" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <H4>
+            Descripción del puesto
+          </H4>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="transparent-card-body">
+        <div class="container my-3">
+          <div class="row g-3">
+
+            <div class="col-12">
+              <label class="bg-dark text-white px-2">📖 Objetivo del puesto</label>
+
+              <textarea class="form-control transparent-input"  aria-label="With textarea"></textarea>
+            </div>
+
+            <div class="col-12">
+              <label class="bg-dark text-white px-2">✅ Responsabilidades</label>
+
+              <textarea class="form-control transparent-input"  aria-label="With textarea"></textarea>
+            </div>
+
+            <div class="col-12">
+              <label class="bg-dark text-white px-2">🛠 Requisitos Técnicos y Habilidades</label>
+
+              <textarea class="form-control transparent-input"  aria-label="With textarea"></textarea>
+            </div>
+
+            <div class="col-12">
+              <label class="bg-dark text-white px-2">🎁 Beneficios</label>
+
+              <textarea class="form-control transparent-input"  aria-label="With textarea"></textarea>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card-header" id="headingAplicantes">
+      <h2 class="mb-0">
+        <button class="btn btn-dark text-white w-100 text-start" type="button" data-toggle="collapse" data-target="#collapseAplicantes" aria-expanded="false" aria-controls="collapseAplicantes">
+          <H4>
+            Aplicantes
+          </H4>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseAplicantes" class="collapse show" aria-labelledby="headingAplicantes" data-parent="#accordionExample">
+      <div class="transparent-card-body">
+        <div class="container my-3">
+          <div class="row g-3">
+
+            <table class="table table-striped table-dark">
+              <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Título</th>
+                <th scope="col">Ubicación</th>
+                <th scope="col">Contrato</th>
+                <th scope="col">Experiencia</th>
+                <th scope="col">Tecnologías</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Estado</th>
+                <th scope="col">#Aplicantes</th>
+                <th scope="col">Reclutador</th>
+                <th scope="col">Acciones</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let job of jobs; let i = index" [ngStyle]="{'background-color': i % 2 === 0 ? '#2C3844' : '#242E38'}">
+                <td>{{ job.id }}</td>
+                <td>{{ job.titulo }}</td>
+                <td>{{ job.ubicacion }}</td>
+                <td>{{ job.tipoContrato }}</td>
+                <td>{{ job.nivelExperiencia }}</td>
+                <td>{{ job.tecnologias }}</td>
+                <td>{{ job.fechaPublicacion }}</td>
+                <td>{{ job.estado }}</td>
+                <td>{{ job.aplicantes }}</td>
+                <td>{{ job.reclutador }}</td>
+                <td>
+                  <button class="btn btn-sm btn-secondary me-2">
+                    <i class="bi bi-pen"></i>
+                  </button>
+                  <button class="btn btn-sm btn-danger">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

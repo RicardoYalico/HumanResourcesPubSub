@@ -1,7 +1,8 @@
     /* Estilos personalizados */
+
     body {
         font-family: Arial, sans-serif;
-      }
+    }
       .sidebar {
         width: 250px;
         position: fixed;
@@ -40,3 +41,30 @@
         cursor: pointer;
         border-radius: 5px;
       }
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+    }
+    .profile-img {
+      width: 120px;  /* Tamaño fijo */
+      height: 120px; /* Tamaño fijo */
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    .divider {
+      border-top: 1px solid #6c757d;
+      margin: 15px 0;
+    }
+    .nav-link {
+      color: white;
+      padding: 10px;
+    }
+    .nav-link:hover {
+      background-color: #495057;
+      border-radius: 5px;
+    }

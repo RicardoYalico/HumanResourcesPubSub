@@ -28,12 +28,12 @@ export class AppComponent implements OnInit{
     // if (this.role === 'applicant') {
     //   document.getElementById('applicantAccess')!.style.display = 'block';
     //   document.getElementById('recruiterAccess')!.style.display = 'none';
-    //   document.getElementById('applicantContent')!.style.display = 'block';
+    //   document.getElementById('applicantContent')!.style.displnt')!.stylay = 'block';
     //   document.getElementById('recruiterContent')!.style.display = 'none';
     // } else if (this.role === 'recruiter') {
     //   document.getElementById('applicantAccess')!.style.display = 'none';
     //   document.getElementById('recruiterAccess')!.style.display = 'block';
-    //   document.getElementById('applicantContent')!.style.display = 'none';
+    //   document.getElementById('applicantContee.display = 'none';
     //   document.getElementById('recruiterContent')!.style.display = 'block';
     // }
   }
