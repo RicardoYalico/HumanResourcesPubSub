@@ -18,7 +18,7 @@ RUN npm run build -- --configuration production
 FROM nginx:alpine
 
 # Copiar los archivos construidos desde la etapa de construcción
-COPY --from=build /app/dist/HumanResourcePubSub /usr/share/nginx/html
+COPY --from=build /app/dist/HumanResourcesPubSub /usr/share/nginx/html
 
 # Copiar la configuración personalizada de Nginx (opcional)
 # COPY nginx.conf /etc/nginx/conf.d/default.conf
