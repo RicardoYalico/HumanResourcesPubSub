@@ -1,0 +1,17 @@
+{
+  "routes": {
+    "/": {},
+    "/home/recruiter": {},
+    "/home/recruiter/analytics-reports": {},
+    "/home/recruiter/candidate-history": {},
+    "/home/recruiter/candidate-list": {},
+    "/home/recruiter/job-details": {},
+    "/home/recruiter/job-management": {},
+    "/home/recruiter/messaging-center": {},
+    "/home/recruiter/notifications": {},
+    "/home/recruiter/process-stage-management": {},
+    "/home/recruiter/stage-evaluations": {},
+    "/home/recruiter/talent-pool": {},
+    "/home/recruiter/team-collaboration": {}
+  }
+}
