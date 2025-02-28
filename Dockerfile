@@ -1,28 +1,28 @@
-# Stage 1: Compile and Build angular codebase
+# Etapa de construcción (build)
+FROM node:20 AS build
+WORKDIR /app
 
-# Use official node image as the base image
-FROM node:latest as build
+# Copiar los archivos de configuración del proyecto
+COPY package.json package-lock.json ./
 
-# Set the working directory
-WORKDIR /usr/local/app
-
-# Add the source code to app
-COPY ./ /usr/local/app/
-
-# Install all the dependencies
+# Instalar dependencias
 RUN npm install
 
-# Generate the build of the application
-RUN npm run build
+# Copiar el resto de los archivos del proyecto
+COPY . .
+
+# Construir la aplicación Angular
+RUN npm run build -- --configuration production
+
+# Etapa de producción (serve)
+FROM nginx:alpine
+
+# Copiar los archivos construidos desde la etapa de construcción
+COPY --from=build /app/dist/human-resources-pub-sub/browser /usr/share/nginx/html
 
 
-# Stage 2: Serve app with nginx server
+# Exponer el puerto 80
+EXPOSE 80
 
-# Use official nginx image as the base image
-FROM nginx:latest
-
-# Copy the build output to replace the default nginx contents.
-COPY --from=build /usr/local/app/dist/human-resources-pub-sub/browser /usr/share/nginx/html
-COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-# Expose port 80
-EXPOSE 3001
+# Iniciar Nginx
+CMD ["nginx", "-g", "daemon off;"]
