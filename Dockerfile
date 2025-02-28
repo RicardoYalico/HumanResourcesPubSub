@@ -21,7 +21,7 @@ FROM nginx:alpine
 COPY --from=build /app/dist/HumanResourcesPubSub /usr/share/nginx/html
 
 # Copiar la configuración personalizada de Nginx (opcional)
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+ COPY nginx.conf /etc/nginx/conf.d/
 
 # Exponer el puerto 80
 EXPOSE 3001
